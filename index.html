@@ -1,36 +1,139 @@
 
+<!DOCTYPE html>
 <html>
-<head>
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="이름 my portfolio">
-  <meta property="og:title" content="제목 나의 포트폴리오">
-  <meta property="og:image" content="./favicon.png">
+  <head>
+    <!-- 공유하면 나오는 메타테그 -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="이거는 사이트 이름 my portfolio">
+    <meta property="og:title" content="이거는 제목 나의 포트폴리오">
+    <meta property="og:image" content="https://assets-global.website-files.com/5f1008192dda2baf6f4e16c3/5f3624c2cc461e5b4a5b8ec6_open%20graph.png">
+    <meta property="og:description" content="데스크리프티온 공유하기를 풍요롭께 꾸며주세요" />
+    <meta property="og:url" content="https://byungsoo86.github.io/htmlcss/"/>
 
 
-  <link rel="icon" href="./favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="./favicon.png">
 
-  <style>
-  
-    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
-    *{
+    <!-- 웹 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <style>
+      /* 웹 폰트 */
+      @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+      *{
         font-family: 'Nanum Myeongjo', serif;
       }
-  </style>
+
+      /* 화면에 붙어있는 친구 */
+      .header{
+        position:fixed;
+        top: 30px;
+        left: 30px;
+      }
+
+    </style>
+  </head>
 
 
-</head>
 
-<body>
-  index
-  내용을 추가해봄
-  또 다른 수정
-  최종
-  진짜 최종
-  
+  <body>
 
-</body>
+    <nav class="header">
+      고정된 아름다운 내비게이션 바 click here!
+      <a href="#경력">경력</a>
+      <a href="#취미">취미</a>
+      <a href="#기타">기타</a>
+    </nav>
 
+
+    <img src="https://images.samsung.com/kdp/aboutsamsung/brand_identity/logo/360_197_1.png" alt="삼성 로고">
+
+
+    <h1>My Portfolio 거대한 제목</h1>
+
+    <a id="경력"><h2>경력</h2></a>
+    <h3>화려하고 웅장하고 매그니피센트 한</h3>
+    <ol>
+      <li>빛을 봄</li>
+      <li>숨쉬기대회 우승</li>
+      <li>말많이하기 대회 참석</li>
+      <li>30번째 생일</li>
+    </ol>
+
+    <h3>이건 빼고 싶었는데</h3>
+    <a href="fake!">자세히 보기</a><br>
+    <br>
+
+
+    <a id="취미"><h2>취미</h2></a>
+    <h3>인생에 중요한것</h3>
+    <ul>
+      <li>숨쉬기</li>
+      <li>냉장고 성에 제거</li>
+      <li>물마시기 (하루 한 컵)</li>
+    </ul>
+    <h3>멋져보이려고</h3>
+    <ul>
+      <li>골프 (예정)</li>
+      <li>마라톤 (half half half half half marathon)</li>
+      <li>응 아니야 </li>
+    </ul>
+    <br>
+    <br>
+
+
+    <a id="기타"><h2>기타</h2></a>
+    <h3>통기타</h3>
+    <ul>
+      <li>없음</li>
+    </ul>
+    <h3>일렉기타</h3>
+    <h4>적절한 위치에 h4 태그 달기 제일 좋은 자리 </h4>
+    <ul>
+      <li>누가 기타 소리를 내었는가 !!</li>
+    </ul>
+    <br>
+    <br>
+
+    <dl>
+      <dt>정의 1</dt>
+        <dd>정의 1은 정의 1입니다.</dd>
+      <dt>정의 2</dt>
+        <dd>정의 2는 정의 1이 아닙니다.<br>
+        그런데 그것이 틀렸습니다.
+        </dd>
+    </dl>
+    
+    <br>
+
+    <h2>부트 배운거 자랑하기 공간</h2>
+    <button type="button" class="btn btn-primary">멋진 버튼</button>
+    <button type="button" class="btn btn-secondary">평범~</button>
+    <button type="button" class="btn btn-success">잘헀어 버튼</button>
+    <button type="button" class="btn btn-danger">자폭 버튼</button>
+    <button type="button" class="btn btn-warning">화난 버튼 </button>
+    <br> 
+    부트 배운 분 <br>
+    br 태그좀 써 .. <br>
+    거대한 다음 줄 <br>
+    <br><br><br><br><br>
+
+
+    <h3>Social</h3>
+    <a href="mailto: this-is-fake@fake.fake">이메일</a>
+    <a href="tel: 010-0000-0000">돈빌려달라고하기</a>
+    <a href="send money: $999999999">그에게 커피한잔의 여유를 선물하세요</a>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  </body>
 </html>
