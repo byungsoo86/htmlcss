@@ -1,0 +1,183 @@
+<!-- CSS를 문서의 어느 곳에나 적용 할 수 있다 -->
+<!-- 블록요소와 인라인 요소의 차이를 안다. -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            button {
+                color: violet;
+                width: 100px;
+            }
+
+            button:hover{  /* 가상 클래스 (상태, 상황) visited 등등 */ 
+                color:red;
+                margin:10;
+                padding:10;
+            }
+            h1, li {color: blue}
+            td, h2 {color:green}
+            div > h1 {color:magenta}
+            div > .color-bv {color:violet} /* div 속에 클래스가 color bv인 경우 */
+            div.color-bv{                    /* div가 color-bv 클래스인 경우 */
+                color:gold;
+                margin-top:20px;
+                margin-bottom:10px;
+                padding: 0 1px 2px 3px;  /* 시계방향. 생략하면 대칭성의 원리 적용 */
+                border: 10px dotted red;
+                /* 위 아래 같음 */
+                border-width: 10px;
+                border-style: dotted;
+                border-color: red
+
+            }
+
+            span.long {
+                color:blue
+            }
+            span > .long {
+                color:red
+            }
+            main > h1 {color:salmon}
+
+            .samsung {
+                color:blue;
+            }
+            .fast-campus {
+                width: 100px;
+            }
+            .short {
+                width: 50px;
+            }
+            .long {
+                width: 200px;
+            }
+            #my-button1 {
+                color: aqua;
+            }
+            div {
+                border:3px dotted red;
+                background-image:url('./bgcute.jpeg');
+                background-repeat:repeat;
+                background-position:center;
+                /* 그 밖에 스크롤에 어떻게 반응하는지 등 .. */
+                width:1000px;
+            }
+            span {
+                border:3px dotted blue;
+            }
+            .mydiv {
+                border:3px dotted red;
+                
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <div>
+            <h1>div의 제목</h1>
+        </div>
+
+
+        <main>
+            <h1>main의 제목</h1>
+        </main>
+
+        <h1>제목</h1>
+        <h2>중간제목</h2>
+        <h3>소제목</h3>
+
+        <!-- 여기는 보이지 않는 주석 ~ -->
+        HTML은 기본적으로 WYSIWYG이 아니다
+        브라우저에서 보는 화면과 코드가 별개다.
+        일반인들이 수정 할 것을 염두에 두고 설계된게 아니기 때문 . read-only 문서.
+        웹개발이 개발자들만의 전유물같고 어렵게 느껴지는 이유이다.
+        semantic 원칙 권장! 
+        네이버도 div div span 남발 .. 하위호환을 위해 어쩔 수 없었다. 더 이상 문서가 아니다 ..
+        tag 자체에 의미를 담자. header nav article figure footer 
+        사업을 한다면 검색엔진 노출 면에서도 중요. 검색엔진은 nav 태그를 참고함 .
+        검색엔진이 알아 볼 수 있게 조직적으로 작성하자.
+        장애인용 장치를 위해서도 필요.
+        사이트의 로고는 h1 안에 넣고 한 번만 쓰자. ex. Naver. 
+
+        skeleton view : 로딩 전에 회색 배경 처리. ex. airbnb. background-color 로 처리.
+
+
+        <h1>안녕하세요    ㅎ ㅎ  ㅎ<<& & &amp; a>3 </h1>
+        <button class="samsung">삼성버튼</button>
+        <button class="samsung fast-campus">삼성패스트캠버튼</button>
+        <button class="samsung fast-campus long">버튼!!</button>
+        <button class="samsung fast-campus short">작은!!</button>
+        <button class="long" id="my-button1">특별한버튼</button>
+
+        <!-- div는 블록 요소. 한 줄을 다 먹는다. display: block -->
+        <div class="color-bv">
+            div 내부에 그냥 텍스트 
+            <p class="color-bv">p class color-bv</p>
+        </div>
+        <div>
+            <span>1-1 </span>
+            <span>1-2 </span>
+            <span>1-3 </span>
+        </div>
+        <div>
+            <span>2-1 </span>
+            <span>2-2 </span>
+            <span>2-3 </span>
+        </div>
+        <div>
+            <span>3-1 </span>
+            <span>3-2 </span>
+            <span>3-3 </span>
+        </div>
+    
+
+        <span class="long">span class long</span>
+        <span>span 내부 <p class="long"> p class long</p></span>
+        <br>
+        
+        <ul class="mydiv">
+            <li>리스트1</li>
+        </ul>
+        <ol class="mydiv">
+            <li>리스트1</li>
+        </ol>
+
+
+
+        <table border=1>
+            <thead>
+                <th>h1</th>
+                <th>h2</th>
+                <th>h3</th>
+            </thead>
+            <tr>
+                <td rowspan="3">1-1</td>
+                <td>1-2</td>
+                <td>1-3</td>
+            </tr>
+            <tr>
+                <td>2-2</td>
+                <td>2-3</td>
+            </tr>
+            <tr>
+                <td>3-2</td>
+                <td>3-3</td>
+            </tr>
+            <tfoot>
+                <td colspan="3">foot1</td>
+
+            </tfoot>
+        </table>
+        <br>
+
+        <input type="date">
+        <input type="button" value="버튼이름">
+        <input type="range" value="60">
+        <br>
+        <button>이거 버튼</button>
+        
+    </body>
+
+</html>
